@@ -18,7 +18,8 @@ class GjDashboardController extends State<GjDashboardView>
     super.initState();
   }
 
-  void onReady() {
+  void onReady() async {
+    await Future.delayed(const Duration(milliseconds: 600));
     addListenerToScrollController();
   }
 
