@@ -1,20 +1,39 @@
-import 'db_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+DocumentReference get userCollection {
+  return FirebaseFirestore.instance
+      .collection("users")
+      .doc(FirebaseAuth.instance.currentUser!.uid);
+}
 
 class UserService {
-  static String? token = "";
-
-  static load() async {
-    token = mainStorage.get("token");
+  static createUserIfNotExists() async {
+    var snapshot = await userCollection.get();
+    if (!snapshot.exists) {
+      await userCollection.set({
+        "id": FirebaseAuth.instance.currentUser!.uid,
+        "photo": FirebaseAuth.instance.currentUser!.photoURL,
+        "email": FirebaseAuth.instance.currentUser!.email,
+        "name": FirebaseAuth.instance.currentUser!.displayName,
+        "point": 0,
+      });
+    }
   }
 
-  static save(String key, String? token) async {
-    mainStorage.put("token", token);
-    UserService.token = token;
+  static updatePoint({
+    required double point,
+  }) async {
+    await userCollection.update({
+      "point": FieldValue.increment(point),
+    });
+  }
+
+  static getUserData() {
+    return {
+      "id": FirebaseAuth.instance.currentUser!.uid,
+      "email": FirebaseAuth.instance.currentUser!.email,
+      "name": FirebaseAuth.instance.currentUser!.displayName,
+    };
   }
 }
-// VISUAL STUDIO 2019
-// C++ Desktop
-
-// SQL atau NoSQL
-// SQL => SQFLITE
-// NO SQL => shared_preferences , hive
