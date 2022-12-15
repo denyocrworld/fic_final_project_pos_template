@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../controller/product_list_controller.dart';
 
-class GjProductListView extends StatefulWidget {
-  const GjProductListView({Key? key}) : super(key: key);
+class ProductListView extends StatefulWidget {
+  const ProductListView({Key? key}) : super(key: key);
 
-  Widget build(context, GjProductListController controller) {
+  Widget build(context, ProductListController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +25,5 @@ class GjProductListView extends StatefulWidget {
   }
 
   @override
-  State<GjProductListView> createState() => GjProductListController();
+  State<ProductListView> createState() => ProductListController();
 }

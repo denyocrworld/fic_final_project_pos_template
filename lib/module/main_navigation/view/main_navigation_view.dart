@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class GjMainNavigationView extends StatefulWidget {
-  const GjMainNavigationView({Key? key}) : super(key: key);
+class MainNavigationView extends StatefulWidget {
+  const MainNavigationView({Key? key}) : super(key: key);
 
-  Widget build(context, GjMainNavigationController controller) {
+  Widget build(context, MainNavigationController controller) {
     controller.view = this;
 
     return DefaultTabController(
@@ -14,10 +14,10 @@ class GjMainNavigationView extends StatefulWidget {
         body: IndexedStack(
           index: controller.selectedIndex,
           children: const [
-            GjDashboardView(),
-            GjPointHistoryView(),
-            GjChatView(),
-            GjProfileView(),
+            DashboardView(),
+            PointHistoryView(),
+            ChatView(),
+            ProfileView(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -50,5 +50,5 @@ class GjMainNavigationView extends StatefulWidget {
   }
 
   @override
-  State<GjMainNavigationView> createState() => GjMainNavigationController();
+  State<MainNavigationView> createState() => MainNavigationController();
 }

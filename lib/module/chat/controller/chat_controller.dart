@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/chat_view.dart';
 
-class GjChatController extends State<GjChatView> implements MvcController {
-  static late GjChatController instance;
-  late GjChatView view;
+class ChatController extends State<ChatView> implements MvcController {
+  static late ChatController instance;
+  late ChatView view;
 
   @override
   void initState() {

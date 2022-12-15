@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../controller/product_form_controller.dart';
 
-class GjProductFormView extends StatefulWidget {
-  const GjProductFormView({Key? key}) : super(key: key);
+class ProductFormView extends StatefulWidget {
+  const ProductFormView({Key? key}) : super(key: key);
 
-  Widget build(context, GjProductFormController controller) {
+  Widget build(context, ProductFormController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +25,5 @@ class GjProductFormView extends StatefulWidget {
   }
 
   @override
-  State<GjProductFormView> createState() => GjProductFormController();
+  State<ProductFormView> createState() => ProductFormController();
 }

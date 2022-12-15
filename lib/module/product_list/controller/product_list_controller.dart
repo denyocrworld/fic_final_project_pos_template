@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/product_list_view.dart';
 
-class GjProductListController extends State<GjProductListView>
+class ProductListController extends State<ProductListView>
     implements MvcController {
-  static late GjProductListController instance;
-  late GjProductListView view;
+  static late ProductListController instance;
+  late ProductListView view;
 
   @override
   void initState() {

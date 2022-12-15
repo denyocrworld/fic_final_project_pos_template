@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/product_form_view.dart';
 
-class GjProductFormController extends State<GjProductFormView>
+class ProductFormController extends State<ProductFormView>
     implements MvcController {
-  static late GjProductFormController instance;
-  late GjProductFormView view;
+  static late ProductFormController instance;
+  late ProductFormView view;
 
   @override
   void initState() {

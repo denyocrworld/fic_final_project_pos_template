@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../controller/chat_controller.dart';
 
-class GjChatView extends StatefulWidget {
-  const GjChatView({Key? key}) : super(key: key);
+class ChatView extends StatefulWidget {
+  const ChatView({Key? key}) : super(key: key);
 
-  Widget build(context, GjChatController controller) {
+  Widget build(context, ChatController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +25,5 @@ class GjChatView extends StatefulWidget {
   }
 
   @override
-  State<GjChatView> createState() => GjChatController();
+  State<ChatView> createState() => ChatController();
 }

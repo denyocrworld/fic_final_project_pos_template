@@ -5,9 +5,9 @@ import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class GjPosController extends State<GjPosView> implements MvcController {
-  static late GjPosController instance;
-  late GjPosView view;
+class PosController extends State<PosView> implements MvcController {
+  static late PosController instance;
+  late PosView view;
 
   @override
   void initState() {

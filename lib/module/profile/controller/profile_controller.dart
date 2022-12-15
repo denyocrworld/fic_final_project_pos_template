@@ -1,10 +1,9 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class GjProfileController extends State<GjProfileView>
-    implements MvcController {
-  static late GjProfileController instance;
-  late GjProfileView view;
+class ProfileController extends State<ProfileView> implements MvcController {
+  static late ProfileController instance;
+  late ProfileView view;
 
   @override
   void initState() {
@@ -20,6 +19,6 @@ class GjProfileController extends State<GjProfileView>
 
   doLogout() async {
     await AuthService.doLogout();
-    Get.offAll(const GjLoginView());
+    Get.offAll(const LoginView());
   }
 }

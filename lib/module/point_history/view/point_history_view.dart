@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../controller/point_history_controller.dart';
 
-class GjPointHistoryView extends StatefulWidget {
-  const GjPointHistoryView({Key? key}) : super(key: key);
+class PointHistoryView extends StatefulWidget {
+  const PointHistoryView({Key? key}) : super(key: key);
 
-  Widget build(context, GjPointHistoryController controller) {
+  Widget build(context, PointHistoryController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +25,5 @@ class GjPointHistoryView extends StatefulWidget {
   }
 
   @override
-  State<GjPointHistoryView> createState() => GjPointHistoryController();
+  State<PointHistoryView> createState() => PointHistoryController();
 }

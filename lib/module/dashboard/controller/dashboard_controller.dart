@@ -4,10 +4,10 @@ import 'dart:developer';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class GjDashboardController extends State<GjDashboardView>
+class DashboardController extends State<DashboardView>
     implements MvcController {
-  static late GjDashboardController instance;
-  late GjDashboardView view;
+  static late DashboardController instance;
+  late DashboardView view;
 
   ScrollController scrollController = ScrollController();
 

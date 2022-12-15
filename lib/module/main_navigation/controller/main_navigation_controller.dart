@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/main_navigation_view.dart';
 
-class GjMainNavigationController extends State<GjMainNavigationView>
+class MainNavigationController extends State<MainNavigationView>
     implements MvcController {
-  static late GjMainNavigationController instance;
-  late GjMainNavigationView view;
+  static late MainNavigationController instance;
+  late MainNavigationView view;
 
   @override
   void initState() {

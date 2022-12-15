@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class GjPosView extends StatefulWidget {
-  const GjPosView({Key? key}) : super(key: key);
+class PosView extends StatefulWidget {
+  const PosView({Key? key}) : super(key: key);
 
-  Widget build(context, GjPosController controller) {
+  Widget build(context, PosController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -105,5 +105,5 @@ class GjPosView extends StatefulWidget {
   }
 
   @override
-  State<GjPosView> createState() => GjPosController();
+  State<PosView> createState() => PosController();
 }

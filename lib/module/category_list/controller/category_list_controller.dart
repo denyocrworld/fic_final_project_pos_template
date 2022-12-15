@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/category_list_view.dart';
 
-class GjCategoryListController extends State<GjCategoryListView>
+class CategoryListController extends State<CategoryListView>
     implements MvcController {
-  static late GjCategoryListController instance;
-  late GjCategoryListView view;
+  static late CategoryListController instance;
+  late CategoryListView view;
 
   @override
   void initState() {

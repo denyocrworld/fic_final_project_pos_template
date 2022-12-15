@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class GjLoginView extends StatefulWidget {
-  const GjLoginView({Key? key}) : super(key: key);
+class LoginView extends StatefulWidget {
+  const LoginView({Key? key}) : super(key: key);
 
-  Widget build(context, GjLoginController controller) {
+  Widget build(context, LoginController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -85,5 +85,5 @@ class GjLoginView extends StatefulWidget {
   }
 
   @override
-  State<GjLoginView> createState() => GjLoginController();
+  State<LoginView> createState() => LoginController();
 }

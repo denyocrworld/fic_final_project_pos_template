@@ -1,9 +1,9 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class GjLoginController extends State<GjLoginView> implements MvcController {
-  static late GjLoginController instance;
-  late GjLoginView view;
+class LoginController extends State<LoginView> implements MvcController {
+  static late LoginController instance;
+  late LoginView view;
 
   @override
   void initState() {
@@ -20,14 +20,14 @@ class GjLoginController extends State<GjLoginView> implements MvcController {
   doLoginAsMember() async {
     var isSuccess = await AuthService.doLoginAsMember();
     if (isSuccess) {
-      Get.offAll(const GjMainNavigationView());
+      Get.offAll(const MainNavigationView());
     }
   }
 
   doLoginAsVendor() async {
     var isSuccess = await AuthService.doLoginAsVendor();
     if (isSuccess) {
-      Get.offAll(const GjMainNavigationView());
+      Get.offAll(const MainNavigationView());
     }
   }
 }

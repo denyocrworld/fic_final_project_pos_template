@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../controller/category_list_controller.dart';
 
-class GjCategoryListView extends StatefulWidget {
-  const GjCategoryListView({Key? key}) : super(key: key);
+class CategoryListView extends StatefulWidget {
+  const CategoryListView({Key? key}) : super(key: key);
 
-  Widget build(context, GjCategoryListController controller) {
+  Widget build(context, CategoryListController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +25,5 @@ class GjCategoryListView extends StatefulWidget {
   }
 
   @override
-  State<GjCategoryListView> createState() => GjCategoryListController();
+  State<CategoryListView> createState() => CategoryListController();
 }

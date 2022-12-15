@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class GjDashboardView extends StatefulWidget {
-  const GjDashboardView({Key? key}) : super(key: key);
+class DashboardView extends StatefulWidget {
+  const DashboardView({Key? key}) : super(key: key);
 
-  Widget build(context, GjDashboardController controller) {
+  Widget build(context, DashboardController controller) {
     controller.view = this;
 
     var appBarColor = Theme.of(context).primaryColor;
@@ -456,7 +456,7 @@ class GjDashboardView extends StatefulWidget {
                   children: [
                     Expanded(
                       child: InkWell(
-                        onTap: () => Get.to(const GjPosView()),
+                        onTap: () => Get.to(const PosView()),
                         child: Column(
                           children: const [
                             Icon(
@@ -478,7 +478,7 @@ class GjDashboardView extends StatefulWidget {
                     ),
                     Expanded(
                       child: InkWell(
-                        onTap: () => Get.to(const GjProductListView()),
+                        onTap: () => Get.to(const ProductListView()),
                         child: Column(
                           children: const [
                             Icon(
@@ -500,7 +500,7 @@ class GjDashboardView extends StatefulWidget {
                     ),
                     Expanded(
                       child: InkWell(
-                        onTap: () => Get.to(const GjCategoryListView()),
+                        onTap: () => Get.to(const CategoryListView()),
                         child: Column(
                           children: const [
                             Icon(
@@ -696,5 +696,5 @@ class GjDashboardView extends StatefulWidget {
   }
 
   @override
-  State<GjDashboardView> createState() => GjDashboardController();
+  State<DashboardView> createState() => DashboardController();
 }

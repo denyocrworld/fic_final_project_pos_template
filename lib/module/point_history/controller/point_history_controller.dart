@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/point_history_view.dart';
 
-class GjPointHistoryController extends State<GjPointHistoryView>
+class PointHistoryController extends State<PointHistoryView>
     implements MvcController {
-  static late GjPointHistoryController instance;
-  late GjPointHistoryView view;
+  static late PointHistoryController instance;
+  late PointHistoryView view;
 
   @override
   void initState() {

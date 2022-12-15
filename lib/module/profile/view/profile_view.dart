@@ -2,10 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class GjProfileView extends StatefulWidget {
-  const GjProfileView({Key? key}) : super(key: key);
+class ProfileView extends StatefulWidget {
+  const ProfileView({Key? key}) : super(key: key);
 
-  Widget build(context, GjProfileController controller) {
+  Widget build(context, ProfileController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -62,5 +62,5 @@ class GjProfileView extends StatefulWidget {
   }
 
   @override
-  State<GjProfileView> createState() => GjProfileController();
+  State<ProfileView> createState() => ProfileController();
 }
